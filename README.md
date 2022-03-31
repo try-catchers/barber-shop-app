@@ -6,15 +6,6 @@
 1. [Wireframes](#Wireframes)
 2. [Schema](#Schema)
 
-### App Evaluation
-
-- **Category:** Store Application/Appointment Scheduler
-- **Mobile:** This is an application developed in mobile for convenience of recurring customers that have a preference for one stylist within the barber shop. Being a mobile application lets users to interact with it on-the-go as it is the most handy device for an action such as scheduling
-- **Story:** Creates, manages, and notifies users within this app for appointments in a barber shop. On the other side, stylists are also notified for when their next appointment is active and will be instantly notified of any reschedules or cancellations.
-- **Market:** Customers that have a preference for a stylist within the barber shop franchise. However, this application has potential for barber shops to create their own dashboard for stylists' convenience.
-- **Habit:** This app would be very handy for customers and stylists to have direct contact with both parties and be instantly notified for updates. It also minimizes the time lost for stylists waiting for customers that rescheduled or cancelled.   
-- **Scope:** First, this will be an application that will be based on one barber shop, then evolve it into a barber shop franchise, and then move on to make a platform for any business that would like to have direct contact with customers that like to make appointments with an agent of their preference. 
-
 ## Overview
 ### Description
 This is an application in order to provide convenience for customers at the time of having to schedule a new appointment without having time to call a barber shop but to schedule during off-work hours with their favourite barber 
