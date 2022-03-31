@@ -7,7 +7,7 @@
 2. [Schema](#Schema)
 
 ### App Evaluation
-[Evaluation of your app across the following attributes]
+
 - **Category:** Store Application/Appointment Scheduler
 - **Mobile:** This is an application developed in mobile for convenience of recurring customers that have a preference for one stylist within the barber shop. Being a mobile application lets users to interact with it on-the-go as it is the most handy device for an action such as scheduling
 - **Story:** Creates, manages, and notifies users within this app for appointments in a barber shop. On the other side, stylists are also notified for when their next appointment is active and will be instantly notified of any reschedules or cancellations.
