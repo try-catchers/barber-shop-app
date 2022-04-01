@@ -89,7 +89,7 @@ An application meant to provide a convenient way for customers to schedule barbe
 * Menu → Toggle/add appointments
 * ‘Receipt’ → View (past and future)appointments/ Toggle upcoming appointments
 * Settings → Toggle settings
-
+<!--
 ## Wireframes
 [Add picture of your hand sketched wireframes in this section]
 <img src="YOUR_WIREFRAME_IMAGE_URL" width=600>
@@ -105,4 +105,4 @@ An application meant to provide a convenient way for customers to schedule barbe
 ### Networking
 - [Add list of network requests by screen ]
 - [Create basic snippets for each Parse network request]
-- [OPTIONAL: List endpoints if using existing API such as Yelp]
+- [OPTIONAL: List endpoints if using existing API such as Yelp] 
