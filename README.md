@@ -87,7 +87,7 @@ An application meant to provide a convenient way for customers to schedule barbe
 * Forced Login -> Account creation if no login is available
 * Account → Text fields to edit
 * Menu → Toggle/add appointments
-* ‘Receipt’ → View appointments/ Toggle upcoming appointments
+* ‘Receipt’ → View (past and future)appointments/ Toggle upcoming appointments
 * Settings → Toggle settings
 
 ## Wireframes
