@@ -107,7 +107,9 @@ An application meant to provide a convenient way for customers to schedule barbe
 |Property | Type | Description |
 | :-: | :-: | | :-: |
 |username | String | The username for a user to log in with |
+| :-: | :-: | | :-: |
 |Property | Type | Description |
+| :-: | :-: | | :-: |
 |Property | Type | Description |
 
 Property,Type,Description
