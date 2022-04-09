@@ -89,20 +89,52 @@ An application meant to provide a convenient way for customers to schedule barbe
 * Menu → Toggle/add appointments
 * ‘Receipt’ → View (past and future)appointments/ Toggle upcoming appointments
 * Settings → Toggle settings
-<!--
+
 ## Wireframes
 [Add picture of your hand sketched wireframes in this section]
-<img src="YOUR_WIREFRAME_IMAGE_URL" width=600>
+<img src="Wireframes.png" width=600>
 
 ### [BONUS] Digital Wireframes & Mockups
+-Figma Link :https://www.figma.com/file/L6wGDvDPxSkRADO3jKqbNe/Untitled?node-id=9%3A439
 
-### [BONUS] Interactive Prototype
 
 ## Schema 
-[This section will be completed in Unit 9]
-### Models
-[Add table of models]
-### Networking
-- [Add list of network requests by screen ]
-- [Create basic snippets for each Parse network request]
-- [OPTIONAL: List endpoints if using existing API such as Yelp] 
+# Barber Shop App Schema Design
+
+
+                             Data Model
+```csvpreview {header="true"}
+Property,Type,Description
+username,String, The username for a user to log in with.
+password,String, The password for a user to log in with.
+email,String, The email to attach to a user.
+phoneNumber,Number, The phone number to attach to a user.
+clientName,String, Name of client.
+stylistName,String, Name of stylist.
+credentials,File, Stylists credentials.
+rating,Object, The rating of a stylist.
+isAvailable,Boolean, Check availability of appointment.
+appointmentTime, DateTime, Time of appointment.
+```
+                             Networking
+* Login Screen
+    * (GET) Username and Password
+* Sign Up Screen
+    * (POST) Create new user
+    * (GET) Gets list of users to see if user already exists
+* Client Home Screen
+    * (GET) Gets available Stylists availability times and scheduals
+    * (PUT) Selects an availability slot
+    * (PUT) Cancel an appointment
+    * (PUT) Update clients profile
+* Stylists Home Screen
+    * (POST) Post availablity times and schedual
+    * (GET) Upcoming Appointments
+    * (PUT) Cancel or request reschedule
+    * (DELETE) Delete an availabilty time/ schedual [Before an appointment is made]
+    * (PUT) Update stylists profile
+* Chat Screen
+    * (POST) Add a text
+    * (GET) Read text
+* Cancel Appointment Screen
+    * (DELETE) Delete an Appointmentelp] 
