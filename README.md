@@ -102,7 +102,7 @@ An application meant to provide a convenient way for customers to schedule barbe
 # Barber Shop App Schema Design
 
 
-                             Data Model
+*Data Model
 
 |Property | Type | Description |
 | :-: | :-: | | :-: |
@@ -121,8 +121,8 @@ credentials,File, Stylists credentials.
 rating,Object, The rating of a stylist.
 isAvailable,Boolean, Check availability of appointment.
 appointmentTime, DateTime, Time of appointment.
-```
-                             Networking
+
+#Networking
 * Login Screen
     * (GET) Username and Password
 * Sign Up Screen
