@@ -47,7 +47,7 @@ An application meant to provide a convenient way for customers to schedule barbe
 * Integration with Google or other social media platform in order to register
 * Navigation implementation
 * Before selecting a stylist on the new appointment page, the user can select one of the locations within the franchise (when the app reaches that level)
-*Chat system 
+* Chat system 
 
 ### 2. Screen Archetypes
 **Login Screen**
@@ -91,16 +91,13 @@ An application meant to provide a convenient way for customers to schedule barbe
 * Settings → Toggle settings
 
 ## Wireframes
-[Add picture of your hand sketched wireframes in this section]
+
 <img src="Wireframes.png" width=600>
 
 ### [BONUS] Digital Wireframes & Mockups
 -Figma Link :https://www.figma.com/file/L6wGDvDPxSkRADO3jKqbNe/Untitled?node-id=9%3A439
 
-
 ## Schema 
-# Barber Shop App Schema Design
-
 
 **Data Model
 
