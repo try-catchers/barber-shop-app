@@ -104,17 +104,7 @@ An application meant to provide a convenient way for customers to schedule barbe
 
 **Data Model
 
-Property,Type,Description
-username,String, The username for a user to log in with.
-password,String, The password for a user to log in with.
-email,String, The email to attach to a user.
-phoneNumber,Number, The phone number to attach to a user.
-clientName,String, Name of client.
-stylistName,String, Name of stylist.
-credentials,File, Stylists credentials.
-rating,Object, The rating of a stylist.
-isAvailable,Boolean, Check availability of appointment.
-appointmentTime, DateTime, Time of appointment.
+<img src="data.png" width=600>
 
 #Networking
 * Login Screen
