@@ -44,10 +44,10 @@ An application meant to provide a convenient way for customers to schedule barbe
 - [ ] Both have the ability to accept, cancel or request to reschedule within a certain timeframe(if cancelled too close to the appointment then their “fulfillment” rate will decrease )
 
 **Optional Nice-to-have Stories**
-* Integration with Google or other social media platforms in order to register
-* Navigation implementation
-* Before selecting a stylist on the new appointment page, the user can select one of the locations within the franchise (when the app reaches that level)
-* Chat system 
+- [ ] Integration with Google or other social media platforms in order to register
+- [ ] Navigation implementation
+- [ ] Before selecting a stylist on the new appointment page, the user can select one of the locations within the franchise (when the app reaches that level)
+- [ ] Chat system 
 
 ### 2. Screen Archetypes
 **Login Screen**
