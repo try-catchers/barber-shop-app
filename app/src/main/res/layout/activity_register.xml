@@ -8,9 +8,9 @@
 
     <Button
         android:id="@+id/btnSubmit"
-        android:layout_width="150dp"
-        android:layout_height="60dp"
-        android:text="Submit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/sign_up"
 
         android:backgroundTint="@color/orange"
 
@@ -24,7 +24,7 @@
         android:id="@+id/tvSignUp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Create a new account"
+        android:text="@string/sign_up"
 
         android:textColor="@color/black"
         android:textSize="30sp"
@@ -39,92 +39,88 @@
     <EditText
         android:id="@+id/etUsername"
         android:layout_width="200dp"
-        android:layout_height="48dp"
-        android:layout_marginTop="50dp"
-        android:background="@drawable/edittext_register"
+        android:layout_height="35dp"
         android:ems="10"
-        android:gravity="center_vertical"
-        android:hint="USERNAME"
-
+        android:gravity="start|top"
         android:inputType="text"
         android:singleLine="true"
-        android:textColorHint="@color/gray"
+        android:background="@drawable/edittext_style"
+
+        android:layout_marginTop="50dp"
+        android:hint="USERNAME"
 
 
-
+        app:layout_constraintTop_toBottomOf="@+id/tvSignUp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvSignUp" />
+        app:layout_constraintStart_toStartOf="parent" />
 
     <EditText
         android:id="@+id/etPassword"
         android:layout_width="200dp"
-        android:layout_height="48dp"
-        android:layout_marginTop="30dp"
-        android:background="@drawable/edittext_style"
+        android:layout_height="35dp"
         android:ems="10"
-        android:gravity="center_vertical"
-        android:hint="PASSWORD"
-
+        android:gravity="start|top"
         android:inputType="textPassword"
         android:singleLine="true"
-        android:textColorHint="@color/gray"
+        android:background="@drawable/edittext_style"
 
+        android:layout_marginTop="30dp"
+        android:hint="PASSWORD"
+
+        app:layout_constraintTop_toBottomOf="@+id/etUsername"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/etUsername" />
+        app:layout_constraintStart_toStartOf="parent"/>
 
     <EditText
         android:id="@+id/etRePassword"
         android:layout_width="200dp"
-        android:layout_height="48dp"
-        android:layout_marginTop="30dp"
-        android:background="@drawable/edittext_style"
+        android:layout_height="35dp"
         android:ems="10"
-        android:gravity="center_vertical"
-        android:hint="RE-ENTER PASSWORD"
-
+        android:gravity="start|top"
         android:inputType="textPassword"
         android:singleLine="true"
-        android:textColorHint="@color/gray"
+        android:background="@drawable/edittext_style"
+
+        android:layout_marginTop="30dp"
+        android:hint="RE-ENTER PASSWORD"
 
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/etPassword" />
+        app:layout_constraintTop_toBottomOf="@+id/etPassword"
+        />
 
     <EditText
         android:id="@+id/etEmail"
         android:layout_width="200dp"
-        android:layout_height="48dp"
-        android:layout_marginTop="30dp"
-        android:background="@drawable/edittext_style"
+        android:layout_height="35dp"
         android:ems="10"
-        android:gravity="center_vertical"
-
-        android:hint="EMAIL"
-
+        android:gravity="start|top"
         android:inputType="text"
+        android:background="@drawable/edittext_style"
+
+        android:layout_marginTop="30dp"
+
         android:singleLine="true"
-        android:textColorHint="@color/gray"
+        android:hint="EMAIL"
 
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/etRePassword" />
+        app:layout_constraintTop_toBottomOf="@+id/etRePassword"
+        tools:layout_editor_absoluteX="99dp" />
 
     <EditText
         android:id="@+id/etPhoneNumber"
         android:layout_width="200dp"
-        android:layout_height="48dp"
-        android:layout_marginTop="30dp"
-        android:background="@drawable/edittext_style"
+        android:layout_height="35dp"
         android:ems="10"
-        android:gravity="center_vertical"
-
-        android:hint="PHONE NUMBER"
+        android:gravity="start|top"
         android:inputType="text"
-        android:singleLine="true"
+        android:background="@drawable/edittext_style"
 
-        android:textColorHint="@color/gray"
+        android:layout_marginTop="30dp"
+        android:hint="PHONE NUMBER"
+
+        android:singleLine="true"
 
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
