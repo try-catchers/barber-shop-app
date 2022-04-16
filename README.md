@@ -41,10 +41,10 @@ An application meant to provide a convenient way for customers to schedule barbe
  </p>
  
 * Both receive alerts as the appointment approaches 
-* Both have the ability to or cancel or request to reschedule within a certain timeframe(if cancelled too close to the appointment then their “fulfillment” rate will decrease )
+* Both have the ability to accept, cancel or request to reschedule within a certain timeframe(if cancelled too close to the appointment then their “fulfillment” rate will decrease )
 
 **Optional Nice-to-have Stories**
-* Integration with Google or other social media platform in order to register
+* Integration with Google or other social media platforms in order to register
 * Navigation implementation
 * Before selecting a stylist on the new appointment page, the user can select one of the locations within the franchise (when the app reaches that level)
 * Chat system 
