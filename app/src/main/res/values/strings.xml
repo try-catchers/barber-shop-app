@@ -3,6 +3,7 @@
     <string name="sign_up">SIGN UP</string>
 
     <string-array name="spinnerAccountModeArray">
+        <item>Account Type</item>
         <item>Customer</item>
         <item>Stylist</item>
     </string-array>
