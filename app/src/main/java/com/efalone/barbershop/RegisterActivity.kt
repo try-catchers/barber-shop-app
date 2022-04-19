@@ -10,8 +10,8 @@ import com.parse.ParseUser
 import kotlin.properties.Delegates
 
 class RegisterActivity : AppCompatActivity(), AdapterView.OnItemSelectedListener {
-    lateinit var spinner : Spinner
-    var accountMode by Delegates.notNull<Int>()
+    private lateinit var spinner : Spinner
+    private var accountMode by Delegates.notNull<Int>()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -41,7 +41,13 @@ class RegisterActivity : AppCompatActivity(), AdapterView.OnItemSelectedListener
             //val phoneNumber = findViewById<EditText>(R.id.phoneNumber).text.toString() TODO add phone number to user entry
             //val emailAddress = findViewById<EditText>(R.id.email).text.toString() TODO add email address to user entry
             //TODO add account mode election (spinner) to the new user entry
-            signUpUser(username, password)
+
+            // check if fields are empty, otherwise, notice the user
+            if(username.isEmpty() || password.isEmpty()) { //TODO require the user to input all fields
+                Toast.makeText(this,"Error! Please fill all fields",Toast.LENGTH_SHORT).show()
+            } else {
+                signUpUser(username, password)
+            }
         }
     }
 
@@ -74,6 +80,9 @@ class RegisterActivity : AppCompatActivity(), AdapterView.OnItemSelectedListener
     }
 
     override fun onItemSelected(parent: AdapterView<*>?, view: View?, pos: Int, id: Long) {
+        // 0 -> N/A
+        // 1 -> Customer
+        // 2 -> Stylist
         accountMode = pos
         Log.i(TAG, "${parent?.getItemAtPosition(pos)}")
     }
