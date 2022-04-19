@@ -29,7 +29,7 @@ An application meant to provide a convenient way for customers to schedule barbe
 ### 1. User Stories (Required and Optional)
 **Required Must-have Stories**
 
-- [ ] Users can create a new account or login
+- [x] Users can create a new account or login
 - [ ] Selection of stylist or client
 
 

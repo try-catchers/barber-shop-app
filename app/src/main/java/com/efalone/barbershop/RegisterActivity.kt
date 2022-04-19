@@ -6,7 +6,7 @@ import android.os.Bundle
 import android.util.Log
 import android.view.View
 import android.widget.*
-import com.parse.ParseClassName
+import com.google.android.material.snackbar.Snackbar
 import com.parse.ParseUser
 import kotlin.properties.Delegates
 
@@ -39,44 +39,35 @@ class RegisterActivity : AppCompatActivity(), AdapterView.OnItemSelectedListener
         findViewById<Button>(R.id.btnSubmit).setOnClickListener {
             val username = findViewById<EditText>(R.id.etUsername).text.toString()
             val password = findViewById<EditText>(R.id.etRePassword).text.toString()
-            val phone = findViewById<EditText>(R.id.etPhoneNumber).text.toString() //TODO add phone number to user entry
-            val email = findViewById<EditText>(R.id.etEmail).text.toString() //TODO add email address to user entry
+            //val phoneNumber = findViewById<EditText>(R.id.phoneNumber).text.toString() TODO add phone number to user entry
+            //val emailAddress = findViewById<EditText>(R.id.email).text.toString() TODO add email address to user entry
             //TODO add account mode election (spinner) to the new user entry
-
-            val accountType = spinner.getSelectedItem().toString()
 
             // check if fields are empty, otherwise, notice the user
             if(username.isEmpty() || password.isEmpty()) { //TODO require the user to input all fields
                 Toast.makeText(this,"Error! Please fill all fields",Toast.LENGTH_SHORT).show()
             } else {
-
-                signUpUser(username, password, email, phone, accountType)
+                signUpUser(username, password)
             }
         }
     }
 
-    private fun signUpUser(
-        username: String, password: String,
-        emailAddress: String, phoneNumber: String,
-        accountType: String){
+    private fun signUpUser(username: String, password: String){
         // Create the ParseUser
         val user = ParseUser()
 
         // Set fields for the user to be created
         user.setUsername(username)
         user.setPassword(password)
-        user.setEmail(emailAddress);
-        user.put("Phone", phoneNumber);
-        user.put("accountType", accountType)
+        //user.setPhoneNumber(phoneNumber)
 
         user.signUpInBackground { e ->
             if (e == null) {
                 // User has successfully created an account
-
                 goToMainActivity()
-                Toast.makeText(this, "Account created successfully", Toast.LENGTH_SHORT).show()
+                Snackbar.make(findViewById(android.R.id.content), "Account created successfully", Snackbar.LENGTH_SHORT).show()
             } else {
-                Toast.makeText(this, "Sign up was not successful", Toast.LENGTH_SHORT).show()
+                Snackbar.make(findViewById(android.R.id.content), "Sign up was not successful", Snackbar.LENGTH_SHORT).show()
                 e.printStackTrace()
             }
         }
