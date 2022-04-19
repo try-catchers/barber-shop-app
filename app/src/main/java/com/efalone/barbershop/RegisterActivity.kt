@@ -6,6 +6,7 @@ import android.os.Bundle
 import android.util.Log
 import android.view.View
 import android.widget.*
+import com.google.android.material.snackbar.Snackbar
 import com.parse.ParseUser
 import kotlin.properties.Delegates
 
@@ -63,11 +64,10 @@ class RegisterActivity : AppCompatActivity(), AdapterView.OnItemSelectedListener
         user.signUpInBackground { e ->
             if (e == null) {
                 // User has successfully created an account
-
                 goToMainActivity()
-                Toast.makeText(this, "Account created successfully", Toast.LENGTH_SHORT).show()
+                Snackbar.make(findViewById(android.R.id.content), "Account created successfully", Snackbar.LENGTH_SHORT).show()
             } else {
-                Toast.makeText(this, "Sign up was not successful", Toast.LENGTH_SHORT).show()
+                Snackbar.make(findViewById(android.R.id.content), "Sign up was not successful", Snackbar.LENGTH_SHORT).show()
                 e.printStackTrace()
             }
         }
