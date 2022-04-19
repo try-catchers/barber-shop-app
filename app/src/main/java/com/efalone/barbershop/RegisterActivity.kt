@@ -39,27 +39,29 @@ class RegisterActivity : AppCompatActivity(), AdapterView.OnItemSelectedListener
         findViewById<Button>(R.id.btnSubmit).setOnClickListener {
             val username = findViewById<EditText>(R.id.etUsername).text.toString()
             val password = findViewById<EditText>(R.id.etRePassword).text.toString()
-            //val phoneNumber = findViewById<EditText>(R.id.phoneNumber).text.toString() TODO add phone number to user entry
-            //val emailAddress = findViewById<EditText>(R.id.email).text.toString() TODO add email address to user entry
-            //TODO add account mode election (spinner) to the new user entry
+            val phoneNumber = findViewById<EditText>(R.id.etPhoneNumber).text.toString()
+            val emailAddress = findViewById<EditText>(R.id.etEmail).text.toString()
+            val accountType = spinner.getSelectedItem().toString()
 
             // check if fields are empty, otherwise, notice the user
             if(username.isEmpty() || password.isEmpty()) { //TODO require the user to input all fields
                 Toast.makeText(this,"Error! Please fill all fields",Toast.LENGTH_SHORT).show()
             } else {
-                signUpUser(username, password)
+                signUpUser(username, password, phoneNumber, emailAddress, accountType)
             }
         }
     }
 
-    private fun signUpUser(username: String, password: String){
+    private fun signUpUser(username: String, password: String, phoneNumber: String, email : String, type: String){
         // Create the ParseUser
         val user = ParseUser()
 
         // Set fields for the user to be created
         user.setUsername(username)
         user.setPassword(password)
-        //user.setPhoneNumber(phoneNumber)
+        user.setEmail(email)
+        user.put("Phone",phoneNumber)
+        user.put("accountType", type)
 
         user.signUpInBackground { e ->
             if (e == null) {
