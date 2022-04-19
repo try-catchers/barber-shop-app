@@ -2,6 +2,13 @@
     <string name="app_name">barbershop</string>
     <string name="sign_up">SIGN UP</string>
 
+    <string-array name="spinnerAccountModeArray">
+        <item>Account Type</item>
+        <item>Customer</item>
+        <item>Stylist</item>
+    </string-array>
+
+    <!-- backend -->
     <string name="back4app_server_url">https://parseapi.back4app.com/</string>
 
     <!-- Paste BOTH strings as required -->
