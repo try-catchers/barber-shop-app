@@ -6,6 +6,7 @@ import android.os.Bundle
 import android.util.Log
 import android.view.View
 import android.widget.*
+import com.parse.ParseClassName
 import com.parse.ParseUser
 import kotlin.properties.Delegates
 
@@ -38,27 +39,35 @@ class RegisterActivity : AppCompatActivity(), AdapterView.OnItemSelectedListener
         findViewById<Button>(R.id.btnSubmit).setOnClickListener {
             val username = findViewById<EditText>(R.id.etUsername).text.toString()
             val password = findViewById<EditText>(R.id.etRePassword).text.toString()
-            //val phoneNumber = findViewById<EditText>(R.id.phoneNumber).text.toString() TODO add phone number to user entry
-            //val emailAddress = findViewById<EditText>(R.id.email).text.toString() TODO add email address to user entry
+            val phone = findViewById<EditText>(R.id.etPhoneNumber).text.toString() //TODO add phone number to user entry
+            val email = findViewById<EditText>(R.id.etEmail).text.toString() //TODO add email address to user entry
             //TODO add account mode election (spinner) to the new user entry
+
+            val accountType = spinner.getSelectedItem().toString()
 
             // check if fields are empty, otherwise, notice the user
             if(username.isEmpty() || password.isEmpty()) { //TODO require the user to input all fields
                 Toast.makeText(this,"Error! Please fill all fields",Toast.LENGTH_SHORT).show()
             } else {
-                signUpUser(username, password)
+
+                signUpUser(username, password, email, phone, accountType)
             }
         }
     }
 
-    private fun signUpUser(username: String, password: String){
+    private fun signUpUser(
+        username: String, password: String,
+        emailAddress: String, phoneNumber: String,
+        accountType: String){
         // Create the ParseUser
         val user = ParseUser()
 
         // Set fields for the user to be created
         user.setUsername(username)
         user.setPassword(password)
-        //user.setPhoneNumber(phoneNumber)
+        user.setEmail(emailAddress);
+        user.put("Phone", phoneNumber);
+        user.put("accountType", accountType)
 
         user.signUpInBackground { e ->
             if (e == null) {
