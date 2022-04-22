@@ -16,6 +16,8 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
+        supportActionBar?.hide()
+
         val fragmentManager: FragmentManager = supportFragmentManager
         // define fragments
         val fragmentHome: Fragment = HomeFragment()
@@ -50,6 +52,8 @@ class MainActivity : AppCompatActivity() {
 
             true
         }
+        // Set default selection (home button)
+        bottomNavigationView.setSelectedItemId(R.id.action_home);
     }
 
     // Menu icons are inflated just as they were with actionbar

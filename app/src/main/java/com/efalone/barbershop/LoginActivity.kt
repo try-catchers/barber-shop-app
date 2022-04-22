@@ -15,9 +15,15 @@ class LoginActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_login)
 
+        //Check if there's a user logged in already
+        //If true, begin MainActivity directly
+        if(ParseUser.getCurrentUser() != null) {
+            goToMainActivity()
+        }
+
         findViewById<Button>(R.id.btnSubmit).setOnClickListener {
-            val username = findViewById<EditText>(R.id.etUsername).text.toString()
-            val password = findViewById<EditText>(R.id.etRePassword).text.toString()
+            val username = findViewById<EditText>(R.id.etLoginUsername).text.toString()
+            val password = findViewById<EditText>(R.id.etLoginPassword).text.toString()
 
             // check if fields are empty, otherwise, notice the user
             if(username.isEmpty() || password.isEmpty()) { //TODO require the user to input all fields
@@ -36,6 +42,7 @@ class LoginActivity : AppCompatActivity() {
         ParseUser.logInInBackground(username,password) { user, e ->
             if (user != null) {
                 Log.i(TAG, "User successfully signed in")
+                goToMainActivity()
             } else {
                 // an error occurred while logging in
                 e.printStackTrace()
@@ -44,16 +51,17 @@ class LoginActivity : AppCompatActivity() {
         }
     }
 
+    private fun goToMainActivity() {
+        val intent = Intent(this@LoginActivity, MainActivity::class.java)
+        startActivity(intent)
+        finish()
+    }
+
     private fun goToRegisterActivity(){
         val intent = Intent(this@LoginActivity, RegisterActivity::class.java)
         startActivity(intent)
         //finish()
     }
-
-    //TODO create fragments
-    /*private fun goToMainFragment() {
-
-    }*/
 
     companion object {
         const val TAG = "LoginActivity"

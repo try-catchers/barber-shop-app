@@ -44,7 +44,7 @@ class RegisterActivity : AppCompatActivity(), AdapterView.OnItemSelectedListener
             val accountType = spinner.getSelectedItem().toString()
 
             // check if fields are empty, otherwise, notice the user
-            if(username.isEmpty() || password.isEmpty()) { //TODO require the user to input all fields
+            if(username.isEmpty() || password.isEmpty() || phoneNumber.isEmpty() || emailAddress.isEmpty() || (accountType == "Account Type")) {
                 Toast.makeText(this,"Error! Please fill all fields",Toast.LENGTH_SHORT).show()
             } else {
                 signUpUser(username, password, phoneNumber, emailAddress, accountType)
