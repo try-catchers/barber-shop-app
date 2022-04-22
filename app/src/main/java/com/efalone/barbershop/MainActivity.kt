@@ -53,7 +53,7 @@ class MainActivity : AppCompatActivity() {
             true
         }
         // Set default selection (home button)
-        bottomNavigationView.setSelectedItemId(R.id.action_home);
+        bottomNavigationView.setSelectedItemId(R.id.action_home)
     }
 
     // Menu icons are inflated just as they were with actionbar
