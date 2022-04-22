@@ -9,7 +9,7 @@ import com.efalone.barbershop.R
 
 
 class NewAppointmentFragment : Fragment() {
-
+    //TODO check issue on github for details
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 

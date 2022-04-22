@@ -8,10 +8,7 @@ import android.view.ViewGroup
 import com.efalone.barbershop.R
 
 class SettingsFragment : Fragment() {
-    // TODO: Rename and change types of parameters
-    private var param1: String? = null
-    private var param2: String? = null
-
+    //TODO check github for issue details on how to implement
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 

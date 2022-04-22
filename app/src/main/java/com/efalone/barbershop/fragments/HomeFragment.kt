@@ -8,11 +8,9 @@ import android.view.ViewGroup
 import com.efalone.barbershop.R
 
 class HomeFragment : Fragment() {
-
+    //TODO get appointment date of the customer here. stylist account, get all appointments filled in the calendar
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-
-
     }
 
     override fun onCreateView(
