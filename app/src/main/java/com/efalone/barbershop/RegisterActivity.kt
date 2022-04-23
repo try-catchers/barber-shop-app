@@ -18,6 +18,9 @@ class RegisterActivity : AppCompatActivity(), AdapterView.OnItemSelectedListener
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_register)
 
+        // hide action bar
+        supportActionBar?.hide()
+
         // initialize spinner
         spinner = findViewById(R.id.spinnerAccountMode)
 
