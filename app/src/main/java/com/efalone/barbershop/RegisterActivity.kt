@@ -73,7 +73,7 @@ class RegisterActivity : AppCompatActivity(), AdapterView.OnItemSelectedListener
                 Snackbar.make(findViewById(android.R.id.content), "Account created successfully", Snackbar.LENGTH_SHORT).show()
             } else {
                 Snackbar.make(findViewById(android.R.id.content), "Sign up was not successful", Snackbar.LENGTH_SHORT).show()
-                e.printStackTrace()
+                Log.e(TAG,e.toString())
             }
         }
     }
