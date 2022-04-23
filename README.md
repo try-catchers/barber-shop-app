@@ -30,15 +30,13 @@ An application meant to provide a convenient way for customers to schedule barbe
 **Required Must-have Stories**
 
 - [x] Users can create a new account or login
-- [ ] Selection of stylist or client
+- [x] Selection of stylist or client
 
 
 |  [ ] Client can request a new scheduled appointment  | [ ] Stylists will be alerted when new appointments are created  |
 | :-: | :-: |
 | [ ] In the new appointment page, the user can select a stylist | [ ] Option to accept or reject the requestappointment |
-<p align="center">
-| [ ] Confirmation Screen/Rejection Screen |
- </p>
+
  
 - [ ] Both receive alerts as the appointment approaches 
 - [ ] Both have the ability to accept, cancel or request to reschedule within a certain timeframe(if cancelled too close to the appointment then their “fulfillment” rate will decrease )
