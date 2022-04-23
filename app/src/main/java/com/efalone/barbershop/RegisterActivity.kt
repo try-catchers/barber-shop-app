@@ -37,10 +37,10 @@ class RegisterActivity : AppCompatActivity(), AdapterView.OnItemSelectedListener
         // add event listeners
 
         findViewById<Button>(R.id.btnSubmit).setOnClickListener {
-            val username = findViewById<EditText>(R.id.etUsername).text.toString()
-            val password = findViewById<EditText>(R.id.etRePassword).text.toString()
-            val phoneNumber = findViewById<EditText>(R.id.etPhoneNumber).text.toString()
-            val emailAddress = findViewById<EditText>(R.id.etEmail).text.toString()
+            val username = findViewById<EditText>(R.id.etNewUsername).text.toString()
+            val password = findViewById<EditText>(R.id.etNewRePassword).text.toString()
+            val phoneNumber = findViewById<EditText>(R.id.etNewPhoneNumber).text.toString()
+            val emailAddress = findViewById<EditText>(R.id.etNewEmail).text.toString()
             val accountType = spinner.getSelectedItem().toString()
 
             // check if fields are empty, otherwise, notice the user
@@ -90,11 +90,7 @@ class RegisterActivity : AppCompatActivity(), AdapterView.OnItemSelectedListener
     }
 
     override fun onNothingSelected(p0: AdapterView<*>?) {
-        TODO("Not yet implemented")
     }
-
-    //TODO: Go into main fragment after user registers successfully
-
 
     companion object {
         const val TAG = "RegisterActivity"
