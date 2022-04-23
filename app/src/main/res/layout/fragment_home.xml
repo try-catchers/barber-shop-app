@@ -14,7 +14,7 @@
             android:id="@+id/tvUserHome"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            tools:text="@string/hello_user"
+            android:text="@string/hello_user"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
@@ -22,7 +22,7 @@
             android:id="@+id/tvUserDescription"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            tools:text="@string/hello_customer"
+            android:text="@string/hello_customer"
 
             android:layout_marginTop="20dp"
 

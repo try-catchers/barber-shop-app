@@ -17,6 +17,7 @@ class LoginActivity : AppCompatActivity() {
 
         //Check if there's a user logged in already
         //If true, begin MainActivity directly
+        goToMainActivity()
         if(ParseUser.getCurrentUser() != null) {
             goToMainActivity()
         }
