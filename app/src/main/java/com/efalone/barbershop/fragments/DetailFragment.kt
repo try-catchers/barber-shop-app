@@ -8,6 +8,7 @@ import android.view.ViewGroup
 import com.efalone.barbershop.R
 
 class DetailFragment : Fragment() {
+    //TODO implement details of the current appointment of the customer
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

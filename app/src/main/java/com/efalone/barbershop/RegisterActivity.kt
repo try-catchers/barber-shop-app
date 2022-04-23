@@ -45,7 +45,7 @@ class RegisterActivity : AppCompatActivity(), AdapterView.OnItemSelectedListener
 
             // check if fields are empty, otherwise, notice the user
             if(username.isEmpty() || password.isEmpty() || phoneNumber.isEmpty() || emailAddress.isEmpty() || (accountType == "Account Type")) {
-                Toast.makeText(this,"Error! Please fill all fields",Toast.LENGTH_SHORT).show()
+                Snackbar.make(findViewById(android.R.id.content),"Error! Please fill all fields",Snackbar.LENGTH_SHORT).show()
             } else {
                 signUpUser(username, password, phoneNumber, emailAddress, accountType)
             }
