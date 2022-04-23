@@ -37,27 +37,30 @@ class RegisterActivity : AppCompatActivity(), AdapterView.OnItemSelectedListener
         // add event listeners
 
         findViewById<Button>(R.id.btnSubmit).setOnClickListener {
+            // get all the data from fields
             val username = findViewById<EditText>(R.id.etUsername).text.toString()
+            val name = findViewById<EditText>(R.id.etName).text.toString()
             val password = findViewById<EditText>(R.id.etRePassword).text.toString()
             val phoneNumber = findViewById<EditText>(R.id.etPhoneNumber).text.toString()
             val emailAddress = findViewById<EditText>(R.id.etEmail).text.toString()
             val accountType = spinner.getSelectedItem().toString()
 
             // check if fields are empty, otherwise, notice the user
-            if(username.isEmpty() || password.isEmpty() || phoneNumber.isEmpty() || emailAddress.isEmpty() || (accountType == "Account Type")) {
+            if(username.isEmpty() || name.isEmpty() || password.isEmpty() || phoneNumber.isEmpty() || emailAddress.isEmpty() || (accountType == "Account Type")) {
                 Snackbar.make(findViewById(android.R.id.content),"Error! Please fill all fields",Snackbar.LENGTH_SHORT).show()
             } else {
-                signUpUser(username, password, phoneNumber, emailAddress, accountType)
+                signUpUser(username, name, password, phoneNumber, emailAddress, accountType)
             }
         }
     }
 
-    private fun signUpUser(username: String, password: String, phoneNumber: String, email : String, type: String){
+    private fun signUpUser(username: String, name: String, password: String, phoneNumber: String, email : String, type: String){
         // Create the ParseUser
         val user = ParseUser()
 
         // Set fields for the user to be created
         user.setUsername(username)
+        user.put("name", name)
         user.setPassword(password)
         user.setEmail(email)
         user.put("Phone",phoneNumber)
@@ -90,11 +93,7 @@ class RegisterActivity : AppCompatActivity(), AdapterView.OnItemSelectedListener
     }
 
     override fun onNothingSelected(p0: AdapterView<*>?) {
-        TODO("Not yet implemented")
     }
-
-    //TODO: Go into main fragment after user registers successfully
-
 
     companion object {
         const val TAG = "RegisterActivity"

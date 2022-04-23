@@ -41,21 +41,39 @@
         app:layout_constraintStart_toStartOf="parent" />
 
     <EditText
+        android:id="@+id/etName"
+        android:layout_width="250dp"
+        android:layout_height="40dp"
+        android:background="@drawable/edittext_register"
+        android:ems="10"
+        android:gravity="center_vertical"
+        android:hint="NAME"
+        android:inputType="text"
+        android:layout_marginTop="30dp"
+        android:singleLine="true"
+
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etUsername" />
+
+    <EditText
         android:id="@+id/etPassword"
         android:layout_width="250dp"
         android:layout_height="40dp"
+        android:background="@drawable/edittext_register"
         android:ems="10"
         android:gravity="center_vertical"
-        android:inputType="textPassword"
-        android:singleLine="true"
-        android:background="@drawable/edittext_register"
-
-        android:layout_marginTop="30dp"
         android:hint="PASSWORD"
+        android:inputType="textPassword"
+        android:layout_marginTop="30dp"
+        android:singleLine="true"
 
-        app:layout_constraintTop_toBottomOf="@+id/etUsername"
+
+
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"/>
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etName" />
 
     <EditText
         android:id="@+id/etRePassword"
@@ -115,18 +133,20 @@
 
 <!--    TODO change spinner background into something that looks like
         TODO a spinner (maybe the same drawable with an arrow on the right) -->
+
+
     <Spinner
         android:id="@+id/spinnerAccountMode"
         android:layout_width="250dp"
         android:layout_height="40dp"
+        android:layout_marginTop="28dp"
         android:background="@drawable/edittext_style"
         android:gravity="center_vertical"
-        android:layout_marginTop="30dp"
 
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/etPhoneNumber" />
-
 
     <Button
         android:id="@+id/btnSubmit"
