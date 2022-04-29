@@ -57,6 +57,8 @@ class RegisterActivity : AppCompatActivity(), AdapterView.OnItemSelectedListener
         val user = ParseUser()
 
         // Set fields for the user to be created
+        // if accountType==Customer, user.put("CustomerName",name)
+        // else user.put("ClientName", name2)
         user.setUsername(username)
         user.setPassword(password)
         user.setEmail(email)

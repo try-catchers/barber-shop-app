@@ -7,13 +7,26 @@
     android:layout_height="match_parent"
     tools:context=".fragments.NewAppointmentFragment">
 
+
+
     <!-- TODO: Update blank fragment layout -->
     <Button
         android:id="@+id/button_1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Add event "
-        android:layout_centerInParent="true"/>
+        android:layout_centerInParent="true"
+        android:text="New Appointment" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="0dp"
+        android:layout_marginEnd="0dp"
+        android:layout_marginBottom="0dp" />
 
 
 </RelativeLayout>
